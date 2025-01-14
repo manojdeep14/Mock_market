@@ -35,7 +35,7 @@ export interface TradeResponse {
 
 const searchStocks = async (query: string): Promise<StockSearch[]> => {
   const response = await fetchApi<StockSearch[]>(
-    `https://34.102.138.199.nip.io/api/stocks/search?query=${encodeURIComponent(query)}`,
+    `https://mock-market-qs3j.onrender.com/api/stocks/search?query=${encodeURIComponent(query)}`,
     {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -49,7 +49,7 @@ const searchStocks = async (query: string): Promise<StockSearch[]> => {
 
 const getStockPrice = async (symbol: string): Promise<StockPrice> => {
   const response = await fetchApi<StockPrice>(
-    `https://34.102.138.199.nip.io/api/stocks/price/${symbol}`,
+    `https://mock-market-qs3j.onrender.com/api/stocks/price/${symbol}`,
     {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -66,7 +66,7 @@ const executeTrade = async (
   { symbol, shares }: TradeRequest
 ): Promise<TradeResponse> => {
   const response = await fetchApi<TradeResponse>(
-    `https://34.102.138.199.nip.io/api/trades/${type.toLowerCase()}`,
+    `https://mock-market-qs3j.onrender.com/api/trades/${type.toLowerCase()}`,
     {
       method: 'POST',
       headers: {

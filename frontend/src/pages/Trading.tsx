@@ -86,7 +86,7 @@ export default function Trading() {
   useEffect(() => {
     const fetchRecentTrades = async () => {
       try {
-        const response = await fetch('https://34.102.138.199.nip.io/api/trades/history', {
+        const response = await fetch('https://mock-market-qs3j.onrender.com/api/trades/history', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
@@ -105,7 +105,7 @@ export default function Trading() {
     const fetchPopularStocks = async () => {
       try {
         setIsLoadingPopular(true);
-        const response = await fetch('https://34.102.138.199.nip.io/api/stocks/popular', {
+        const response = await fetch('https://mock-market-qs3j.onrender.com/api/stocks/popular', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }

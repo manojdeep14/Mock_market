@@ -107,7 +107,7 @@ function Register() {
 
     try {
       const { data, error } = await fetchApi<{ token: string; user: any }>( // Replace 'any' with your User type
-        'https://34.102.138.199.nip.io/api/auth/register',
+        'https://mock-market-qs3j.onrender.com/api/auth/register',
         {
           method: 'POST',
           body: JSON.stringify({

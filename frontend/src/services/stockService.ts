@@ -17,7 +17,7 @@ export interface StockSearch {
 }
 
 class StockService {
-  private baseUrl = 'https://34.102.138.199.nip.io/api';
+  private baseUrl = 'https://mock-market-qs3j.onrender.com/api';
 
   // Search stocks
   async searchStocks(query: string): Promise<StockSearch[]> {

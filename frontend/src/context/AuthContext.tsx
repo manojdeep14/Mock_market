@@ -34,7 +34,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     try {
-      const response = await fetchApi<User>('https://34.102.138.199.nip.io/api/auth/me', {
+      const response = await fetchApi<User>('https://mock-market-qs3j.onrender.com/api/auth/me', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

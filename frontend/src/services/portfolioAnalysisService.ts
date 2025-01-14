@@ -30,7 +30,7 @@ const getPortfolioAnalysis = async () => {
     metrics: PortfolioMetrics;
     performance: PerformanceData[];
     trades: TradeHistory[];
-  }>('https://34.102.138.199.nip.io/api/portfolio/analysis', {
+  }>('https://mock-market-qs3j.onrender.com/api/portfolio/analysis', {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }
@@ -43,7 +43,7 @@ const getPortfolioAnalysis = async () => {
 const getTradeHistory = async () => {
   const response = await fetchApi<{
     trades: TradeHistory[];
-  }>('https://34.102.138.199.nip.io/api/trades/history', {
+  }>('https://mock-market-qs3j.onrender.com/api/trades/history', {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }

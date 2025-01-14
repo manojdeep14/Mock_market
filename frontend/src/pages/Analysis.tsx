@@ -71,7 +71,7 @@ export default function Analysis() {
         // Fetch both performance and analysis data
         const [perfResponse, analysisResponse] = await Promise.all([
           fetchApi<PerformanceResponse>(
-            `https://34.102.138.199.nip.io/api/portfolio/performance?period=${timeRange}`,
+            `https://mock-market-qs3j.onrender.com/api/portfolio/performance?period=${timeRange}`,
             {
               headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -79,7 +79,7 @@ export default function Analysis() {
             }
           ),
           fetchApi<AnalysisResponse>(
-            'https://34.102.138.199.nip.io/api/portfolio/analysis',
+            'https://mock-market-qs3j.onrender.com/api/portfolio/analysis',
             {
               headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`

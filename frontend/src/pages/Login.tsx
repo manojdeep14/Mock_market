@@ -71,7 +71,7 @@ function Login() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://34.102.138.199.nip.io/api/auth/login', {
+      const response = await fetch('https://mock-market-qs3j.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -22,7 +22,7 @@ export interface PortfolioData {
 }
 
 const getPortfolioData = async (): Promise<PortfolioData> => {
-  const response = await fetchApi<PortfolioData>('https://34.102.138.199.nip.io/api/portfolio/snapshot', {
+  const response = await fetchApi<PortfolioData>('https://mock-market-qs3j.onrender.com/api/portfolio/snapshot', {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }

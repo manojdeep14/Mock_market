@@ -14,7 +14,7 @@ export interface WatchlistItem {
 
 const getWatchlist = async (): Promise<WatchlistItem[]> => {
   const response = await fetchApi<WatchlistItem[]>(
-    'https://34.102.138.199.nip.io/api/watchlist',
+    'https://mock-market-qs3j.onrender.com/api/watchlist',
     {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -28,7 +28,7 @@ const getWatchlist = async (): Promise<WatchlistItem[]> => {
 
 const addToWatchlist = async (symbol: string, alertAbove?: number, alertBelow?: number) => {
   const response = await fetchApi<{ message: string }>(
-    'https://34.102.138.199.nip.io/api/watchlist/add',
+    'https://mock-market-qs3j.onrender.com/api/watchlist/add',
     {
       method: 'POST',
       headers: {
@@ -44,7 +44,7 @@ const addToWatchlist = async (symbol: string, alertAbove?: number, alertBelow?: 
 
 const removeFromWatchlist = async (symbol: string) => {
   const response = await fetchApi<{ message: string }>(
-    `https://34.102.138.199.nip.io/api/watchlist/${symbol}`,
+    `https://mock-market-qs3j.onrender.com/api/watchlist/${symbol}`,
     {
       method: 'DELETE',
       headers: {
@@ -59,7 +59,7 @@ const removeFromWatchlist = async (symbol: string) => {
 
 const updateAlerts = async (symbol: string, alertAbove?: number, alertBelow?: number) => {
   const response = await fetchApi<{ message: string }>(
-    `https://34.102.138.199.nip.io/api/watchlist/${symbol}/alerts`,
+    `https://mock-market-qs3j.onrender.com/api/watchlist/${symbol}/alerts`,
     {
       method: 'PUT',
       headers: {

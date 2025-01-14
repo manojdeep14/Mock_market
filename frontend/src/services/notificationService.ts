@@ -11,7 +11,7 @@ export interface Notification {
 
 const getNotifications = async (): Promise<Notification[]> => {
   const response = await fetchApi<Notification[]>(
-    'https://34.102.138.199.nip.io/api/notifications',
+    'https://mock-market-qs3j.onrender.com/api/notifications',
     {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -25,7 +25,7 @@ const getNotifications = async (): Promise<Notification[]> => {
 
 const markAsRead = async (notificationId: string): Promise<Notification> => {
   const response = await fetchApi<Notification>(
-    `https://34.102.138.199.nip.io/api/notifications/${notificationId}/read`,
+    `https://mock-market-qs3j.onrender.com/api/notifications/${notificationId}/read`,
     {
       method: 'POST',
       headers: {
@@ -40,7 +40,7 @@ const markAsRead = async (notificationId: string): Promise<Notification> => {
 
 const markAllAsRead = async (): Promise<void> => {
   const response = await fetchApi<{ message: string }>(
-    'https://34.102.138.199.nip.io/api/notifications/read-all',
+    'https://mock-market-qs3j.onrender.com/api/notifications/read-all',
     {
       method: 'POST',
       headers: {

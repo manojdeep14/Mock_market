@@ -37,7 +37,7 @@ export function usePortfolio() {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('No authentication token found');
 
-      const response = await fetchApi<PortfolioData>('https://34.102.138.199.nip.io/api/portfolio/snapshot', {
+      const response = await fetchApi<PortfolioData>('https://mock-market-qs3j.onrender.com/api/portfolio/snapshot', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
